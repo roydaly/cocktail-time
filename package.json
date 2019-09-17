@@ -1,0 +1,28 @@
+{
+  "name": "jwt-auth-boilerplate",
+  "version": "1.0.0",
+  "description": "JWT Authentication Example with React",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeders/drinks.js",
+    "heroku-postbuild":"npm run seed && cd client && npm install --only=dev && npm install && npm run build"
+  },
+  "author": "Roy Daly",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
+    "create-react-app": "^3.0.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "express-rate-limit": "^5.0.0",
+    "helmet": "^3.19.0",
+    "jsonwebtoken": "^8.5.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.6.5",
+    "react-router": "^5.0.1"
+  }
+}
